@@ -3,7 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Breadcrumbs from "@material-ui/core/Breadcrumbs";
 import Link from "@material-ui/core/Link";
 import HomeIcon from "@material-ui/icons/Home";
-import ArrowBackIcon from "@material-ui/icons/ArrowBack";
+import MapIcon from '@material-ui/icons/Map';
 
 const useStyles = makeStyles((theme) => ({
   link: {
@@ -25,7 +25,7 @@ const NavigationComponent = () => {
         <HomeIcon fontSize="large" color="primary" />
       </Link>
       <Link color="inherit" href="/cycle-map" className={classes.link}>
-        <ArrowBackIcon fontSize="large" color="primary" />
+        <MapIcon fontSize="large" color="primary" />
       </Link>
     </Breadcrumbs>
   );

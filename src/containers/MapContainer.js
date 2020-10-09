@@ -31,7 +31,8 @@ const MapContainer = () => {
   }, []);
   const handleViewportChange = (viewport) => setViewport(viewport);
   const handleClickOnMap = (event) => {
-    history.push(`/weather-graphs/${event.lngLat[0]}/${event.lngLat[1]}`);
+    console.log(event);
+    history.push(`/weather-timeChart/${event.lngLat[1]}/${event.lngLat[0]}`);
   };
   return (
     <MapContext.Provider

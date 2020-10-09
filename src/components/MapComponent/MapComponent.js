@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import ReactMapGL, { Source, Layer } from "react-map-gl";
 import { MapContext } from "../../containers/MapContainer";
 
+
 const MapComponent = () => {
   const {
     viewport,

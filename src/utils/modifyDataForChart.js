@@ -1,6 +1,5 @@
 export const modifyDataForChart = (data) => {
-  const descriptionKeys = Object.keys(data.meta.units);
-  const description = getDescriptionData(descriptionKeys);
+  const description = getDescriptionData();
   const units = getUnitsData(data.meta.units);
   const weatherChartData = getWeatherConditionData(data, description);
   return {
@@ -10,11 +9,11 @@ export const modifyDataForChart = (data) => {
   };
 };
 
-const getDescriptionData = (keys) => {
+const getDescriptionData = () => {
   const description = {
-    air_temperature: keys[1],
-    relative_humidity: keys[15],
-    wind_speed: keys[18],
+    air_temperature: "air_temperature",
+    relative_humidity: "relative_humidity",
+    wind_speed: "wind_speed",
   };
   return description;
 };
