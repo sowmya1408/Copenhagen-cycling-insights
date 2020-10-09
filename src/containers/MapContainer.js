@@ -1,6 +1,6 @@
 import React, { useState, useEffect, createContext } from "react";
 import MapComponent from "../components/MapComponent/MapComponent";
-import {useHistory} from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 export const MapContext = createContext();
 
@@ -10,8 +10,8 @@ const MapContainer = () => {
     width: "100vw",
     height: "100vh",
     zoom: 12,
-    latitude: 55.66,
-    longitude: 12.52,
+    latitude: 55.685,
+    longitude: 12.565,
   });
   const [cycleData, setCycleData] = useState(null);
 
@@ -24,19 +24,25 @@ const MapContainer = () => {
         const getCycleDataInJson = await getCycleData.json();
         setCycleData(getCycleDataInJson);
       } catch (err) {
-        return `Error: ${err}`
+        return `Error: ${err}`;
       }
     };
     fetchCycleData();
   }, []);
-   console.log(cycleData);
   const handleViewportChange = (viewport) => setViewport(viewport);
-  const handleClickOnMap =  (event) => {
-    history.push(`/weather-graphs/${event.lngLat[0]}/${event.lngLat[1]}`) 
-  }
+  const handleClickOnMap = (event) => {
+    history.push(`/weather-graphs/${event.lngLat[0]}/${event.lngLat[1]}`);
+  };
   return (
-    <MapContext.Provider value={{ viewport, cycleData, handleViewportChange, handleClickOnMap}}>
-      <MapComponent />
+    <MapContext.Provider
+      value={{
+        viewport,
+        cycleData,
+        handleViewportChange,
+        handleClickOnMap,
+      }}
+    >
+     <MapComponent />
     </MapContext.Provider>
   );
 };
