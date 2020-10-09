@@ -32,12 +32,12 @@ const HomeComponent = () => {
         </li>
         <li>
           Step2: Click on any location on the map to view airtemperature,
-          humidity, wind speed.
+          humidity, wind speed charts.
         </li>
         <li>
           Tip1
           <EmojiObjectsIcon className="tip-icon" />
-          You can click on any location on map to see charts and page chart, the brush can be moved to adjust dates and see data.
+          On charts page, the brush can be moved to adjust dates and see data.
         </li>
         <li>
           Tip2
