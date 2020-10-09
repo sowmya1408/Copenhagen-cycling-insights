@@ -1,6 +1,6 @@
 #### Project Deployment
 
-Deployed on heroku[link]()
+Deployed on heroku[link](https://dashboard.heroku.com/apps/cph-cycling-insights)
 
 #### Technologies
 
